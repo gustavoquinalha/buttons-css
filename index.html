@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons CSS - @gustavoquinalha</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-kerning: auto;
+        -webkit-font-smoothing: inherit;
+        -moz-osx-font-smoothing: inherit;
+        -webkit-appearance: none;
+      }
+
+      html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--color-primary)
+      }
+
+      .size {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .content {
+        padding: 20px;
+        box-sizing: border-box;
+        color: #333;
+      }
+
+      .content.content-header {
+        min-height: 500px;
+      }
+
+      .content.content-header h1 {
+        font-size: 4rem;
+      }
+
+      .content .btn {
+        margin: 5px;
+      }
+
+      .box-title {
+        margin-bottom: 10px;
+        margin-left: 2px;
+      }
+
+      @media (max-width: 768px) {
+        .content.content-header h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="size">
+
+      <div class="content content-header container column align-center">
+        <h1>Buttons<span>.css</span></h1>
+        <div class="container wrap align-center">
+          <a href="#" class="btn btn-min-width link">Get started</a>
+          <a href="https://github.com/gustavoquinalha/buttons-css" target="_blank" class="btn btn-min-width btn-primary link">Github</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="box-title">
+          <h2>Default</h2>
+        </div>
+        <button type="button" name="button" class="btn">Default</button>
+        <a href="#" class="btn">Default Link</a>
+      </div>
+
+      <div class="content">
+        <div class="box-title">
+          <h2>Sizes</h2>
+        </div>
+        <button type="button" name="button" class="btn btn-sm">Button Small</button>
+        <button type="button" name="button" class="btn">Button Normal</button>
+        <button type="button" name="button" class="btn btn-lg">Button Large</button>
+      </div>
+
+      <div class="content">
+        <div class="box-title">
+          <h2>Primary colors</h2>
+        </div>
+        <button type="button" name="button" class="btn btn-primary">Button primary</button>
+        <button type="button" name="button" class="btn btn-secundary">Button secundary</button>
+      </div>
+
+      <div class="content">
+        <div class="box-title">
+          <h2>Status</h2>
+        </div>
+        <button type="button" name="button" class="btn btn-warning">Warning</button>
+        <button type="button" name="button" class="btn btn-danger">Danger</button>
+        <button type="button" name="button" class="btn btn-success">Success</button>
+      </div>
+
+      <div class="content">
+        <div class="box-title">
+          <h2>Full width</h2>
+        </div>
+        <button type="button" name="button" class="btn btn-full">Full width</button>
+      </div>
+
+      <div class="content">
+        <div class="box-title">
+          <h2>Disabled</h2>
+        </div>
+        <button type="button" name="button" class="btn" disabled>Disabled</button>
+        <button type="button" name="button" class="btn btn-primary" disabled>Disabled</button>
+      </div>
+
+    </div>
+  </body>
+
+</html>
