@@ -22,6 +22,7 @@
       html {
         font-family: sans-serif;
         -webkit-text-size-adjust: 100%;
+        color: var(--color-black);
       }
 
       body {
@@ -30,27 +31,40 @@
 
       a {
         text-decoration: none;
-        color: var(--color-primary)
+        color: var(--color-primary);
+        transition: .3s;
+      }
+
+      a:hover {
+        color: var(--color-secundary)
       }
 
       .size {
-        width: 100%;
+        width: 90%;
         max-width: 900px;
         margin: 0 auto;
       }
 
       .content {
-        padding: 20px;
+        padding: 20px 0;
         box-sizing: border-box;
-        color: #333;
+        color: #000;
       }
 
       .content.content-header {
         min-height: 500px;
+        margin-bottom: 30px;
+        background: #000;
       }
 
       .content.content-header h1 {
         font-size: 4rem;
+        color: var(--color-white);
+      }
+
+      .content.content-header p {
+        margin-bottom: 20px;
+        color: #BBB;
       }
 
       .content .btn {
@@ -62,6 +76,12 @@
         margin-left: 2px;
       }
 
+      .footer {
+        padding: 100px 0;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
       @media (max-width: 768px) {
         .content.content-header h1 {
           font-size: 3rem;
@@ -71,16 +91,18 @@
   </head>
 
   <body>
-    <div class="size">
 
-      <div class="content content-header container column align-center">
+    <div class="content content-header container align-center">
+      <div class="size container column">
         <h1>Buttons<span>.css</span></h1>
-        <div class="container wrap align-center">
-          <a href="#" class="btn btn-min-width link">Get started</a>
-          <a href="https://github.com/gustavoquinalha/buttons-css" target="_blank" class="btn btn-min-width btn-primary link">Github</a>
+        <p>Simple CSS for buttons.</p>
+        <div class="container wrap">
+          <a href="https://github.com/gustavoquinalha/buttons-css" target="_blank" class="btn btn-primary">Github</a>
         </div>
       </div>
+    </div>
 
+    <div class="size">
       <div class="content">
         <div class="box-title">
           <h2>Default</h2>
@@ -129,8 +151,15 @@
         <button type="button" name="button" class="btn" disabled>Disabled</button>
         <button type="button" name="button" class="btn btn-primary" disabled>Disabled</button>
       </div>
-
     </div>
+
+    <footer>
+      <div class="footer">
+        <div class="size">
+          buttons.css - <a href="https://github.com/gustavoquinalha/" target="_blank">@gustavoquinalha</a>
+        </div>
+      </div>
+    </footer>
   </body>
 
 </html>
