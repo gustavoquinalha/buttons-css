@@ -1,6 +1,6 @@
 {
-  "name": "buttons-css",
-  "version": "1.0.0",
+  "name": "@gustavoquinalha/buttons-css",
+  "version": "0.0.1",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
