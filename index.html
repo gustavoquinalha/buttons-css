@@ -7,6 +7,7 @@
   <title>Buttons CSS - @gustavoquinalha</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -27,6 +28,11 @@
 
     body {
       margin: 0;
+    }
+
+    pre {
+      padding: 5px;
+      box-sizing: border-box;
     }
 
     a {
@@ -112,6 +118,13 @@
       </div>
       <button type="button" name="button" class="btn">Default</button>
       <a href="#" class="btn">Default Link</a>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Default Link&lt;/a&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -121,6 +134,15 @@
       <button type="button" name="button" class="btn btn-lg">Button Large</button>
       <button type="button" name="button" class="btn">Button Normal</button>
       <button type="button" name="button" class="btn btn-sm">Button Small</button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-lg&quot;&gt;Button Large&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Button Normal&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-sm&quot;&gt;Button Small&lt;/button&gt;
+        </code></pre>
+      </div>
+
     </div>
 
     <div class="content">
@@ -128,6 +150,12 @@
         <h2>Full width</h2>
       </div>
       <button type="button" name="button" class="btn btn-full">Full width</button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-full&quot;&gt;Full width&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -136,6 +164,13 @@
       </div>
       <button type="button" name="button" class="btn btn-rounded">Rounded</button>
       <a href="#" class="btn btn-rounded">Link Rounded</a>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-rounded&quot;&gt;Rounded&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded&quot;&gt;Link Rounded&lt;/a&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -144,6 +179,13 @@
       </div>
       <button type="button" name="button" class="btn btn-primary">Button primary</button>
       <button type="button" name="button" class="btn btn-secundary">Button secundary</button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-secundary&quot;&gt;Button secundary&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -153,6 +195,14 @@
       <button type="button" name="button" class="btn btn-warning">Warning</button>
       <button type="button" name="button" class="btn btn-danger">Danger</button>
       <button type="button" name="button" class="btn btn-success">Success</button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -161,6 +211,13 @@
       </div>
       <button type="button" name="button" class="btn" disabled>Disabled</button>
       <button type="button" name="button" class="btn btn-primary" disabled>Disabled</button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot; disabled&gt;Disabled&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -171,6 +228,15 @@
       <button type="button" name="button" class="btn"><span class="feather-icon icon-book"></span></button>
       <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
       <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;&lt;span class=&quot;feather-icon icon-check-circle icon-margin-right&quot;&gt;&lt;/span&gt; Confirm&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-book&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-arrow-left icon-margin-right&quot;&gt;&lt;/span&gt; Previous&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Next &lt;span class=&quot;feather-icon icon-arrow-right icon-margin-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -181,16 +247,34 @@
       <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-book"></span></button>
       <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-camera"></span></button>
       <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-file"></span></button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-book&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-camera&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-file&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
       <div class="box-title">
         <h2>Transparent background</h2>
       </div>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-left"></span> </button>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-right"></span> </button>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-edit"></span> </button>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-x"></span> </button>
+      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-left"></span></button>
+      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-right"></span></button>
+      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-edit"></span></button>
+      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-x"></span></button>
+
+      <div class="example">
+        <pre><code class="html">
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-right&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-edit&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        </code></pre>
+      </div>
     </div>
 
     <div class="content">
@@ -204,13 +288,36 @@
           <button type="button" name="button" class="btn">Group 3</button>
           <button type="button" name="button" class="btn">Group 4</button>
         </div>
+        <div class="example">
+          <pre><code class="html">
+&lt;div class=&quot;group-buttons&quot;&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+
         <div class="group-buttons column">
           <button type="button" name="button" class="btn">Group 1</button>
           <button type="button" name="button" class="btn">Group 2</button>
           <button type="button" name="button" class="btn">Group 3</button>
           <button type="button" name="button" class="btn">Group 4</button>
         </div>
+        <div class="example">
+          <pre><code class="html">
+&lt;div class=&quot;group-buttons column&quot;&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
       </div>
+
     </div>
 
   </div>
@@ -222,6 +329,11 @@
       </div>
     </div>
   </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>
