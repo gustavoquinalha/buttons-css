@@ -77,6 +77,10 @@
     color: var(--color-white);
   }
 
+  &.btn-rounded {
+    border-radius: 50px;
+  }
+
   // disabled
   &.btn.disabled,
   &.btn:disabled,
@@ -96,13 +100,27 @@
   }
 
   span.feather-icon {
-    font-weight: 900;
+    font-weight: 700;
 
     &.icon-margin-right {
       margin-right: 10px;
     }
+
     &.icon-margin-left {
       margin-left: 10px;
+    }
+  }
+
+  &.btn-link {
+    padding: 20px;
+  }
+
+  &.btn-transparent {
+    background: transparent;
+    font-size: 20px;
+
+    &:hover {
+      opacity: 0.5;
     }
   }
 
@@ -125,6 +143,32 @@
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
       border-right: none;
+    }
+  }
+
+  // refatorar
+  &.column {
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      margin: 0!important;
+      border-radius: 0;
+      border-right: none;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 0;
+        border-bottom: none;
+      }
     }
   }
 
@@ -152,4 +196,5 @@
       }
     }
   }
+  // refatorar
 }
