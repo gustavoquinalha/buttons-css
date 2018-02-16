@@ -91,6 +91,22 @@
       background: #ddd;
     }
 
+    .example {
+      position: relative;
+    }
+
+    .example .btn-example {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 5px!important;
+      opacity: 0;
+    }
+
+    .example:hover .btn-example {
+      opacity: 1;
+    }
+
     @media (max-width: 768px) {
       .content.content-header h1 {
         font-size: 3rem;
@@ -123,10 +139,11 @@
       <a href="#" class="btn">Default Link</a>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example1">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Default&lt;/button&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Default Link&lt;/a&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example1"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -139,11 +156,12 @@
       <button type="button" name="button" class="btn btn-sm">Button Small</button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example2">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-lg&quot;&gt;Button Large&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Button Normal&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-sm&quot;&gt;Button Small&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example2"><span class="feather-icon icon-clipboard"></span></button>
       </div>
 
     </div>
@@ -155,9 +173,10 @@
       <button type="button" name="button" class="btn btn-full">Full width</button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example3">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-full&quot;&gt;Full width&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example3"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -169,10 +188,11 @@
       <a href="#" class="btn btn-rounded">Link Rounded</a>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example4">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-rounded&quot;&gt;Rounded&lt;/button&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn-rounded&quot;&gt;Link Rounded&lt;/a&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example4"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -184,10 +204,11 @@
       <button type="button" name="button" class="btn btn-secundary">Button secundary</button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example5">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button primary&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-secundary&quot;&gt;Button secundary&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example5"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -200,11 +221,12 @@
       <button type="button" name="button" class="btn btn-success">Success</button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example6">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example6"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -216,10 +238,11 @@
       <button type="button" name="button" class="btn btn-primary" disabled>Disabled</button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example7">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot; disabled&gt;Disabled&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example7"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -233,12 +256,13 @@
       <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example8">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;&lt;span class=&quot;feather-icon icon-check-circle icon-margin-right&quot;&gt;&lt;/span&gt; Confirm&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-book&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-arrow-left icon-margin-right&quot;&gt;&lt;/span&gt; Previous&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Next &lt;span class=&quot;feather-icon icon-arrow-right icon-margin-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example8"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -252,12 +276,13 @@
       <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-file"></span></button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example9">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-book&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-camera&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-file&quot;&gt;&lt;/span&gt;&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example9"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -271,12 +296,13 @@
       <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-x"></span></button>
 
       <div class="example">
-        <pre><code class="html">
+        <pre><code class="html" id="example10">
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-right&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-edit&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
         </code></pre>
+        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example10"><span class="feather-icon icon-clipboard"></span></button>
       </div>
     </div>
 
@@ -292,7 +318,7 @@
           <button type="button" name="button" class="btn">Group 4</button>
         </div>
         <div class="example margin-bottom-20">
-          <pre><code class="html">
+          <pre><code class="html" id="example11">
 &lt;div class=&quot;group-buttons&quot;&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
@@ -300,6 +326,7 @@
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
 &lt;/div&gt;
           </code></pre>
+          <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example11"><span class="feather-icon icon-clipboard"></span></button>
         </div>
 
 
@@ -310,7 +337,7 @@
           <button type="button" name="button" class="btn">Group 4</button>
         </div>
         <div class="example">
-          <pre><code class="html">
+          <pre><code class="html" id="example12">
 &lt;div class=&quot;group-buttons column&quot;&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
@@ -318,6 +345,7 @@
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
 &lt;/div&gt;
           </code></pre>
+          <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example12"><span class="feather-icon icon-clipboard"></span></button>
         </div>
       </div>
 
@@ -334,8 +362,10 @@
   </footer>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
+    new Clipboard('.btn');
   </script>
 </body>
 
