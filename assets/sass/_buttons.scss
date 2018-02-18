@@ -124,6 +124,22 @@
     }
   }
 
+  .icon.icon-loader {
+    @keyframes loading {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {}
+    }
+    animation: 2.5s loading infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    font-size: 20px;
+    font-weight: 700;
+    transform-origin: center;
+  }
+
 }
 
 .group-buttons {

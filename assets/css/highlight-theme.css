@@ -10,16 +10,17 @@
  * @author Zeno Rocha <hi@zenorocha.com>
  */
 
- pre,
- code {
-   margin: 0;
-   padding: 0;
- }
+pre,
+code {
+  margin: 0;
+  padding: 0;
+}
 
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0;
+  padding: 10px;
+  box-sizing: border-box;
   background: #282a36;
   border-radius: 4px;
 }
