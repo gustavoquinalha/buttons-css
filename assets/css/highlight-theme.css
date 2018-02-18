@@ -21,9 +21,24 @@ code {
   overflow-x: auto;
   padding: 10px;
   box-sizing: border-box;
-  background: #282a36;
+  background: #f0f0f0;
   border-radius: 4px;
   max-height: 300px;
+}
+
+.hljs::-webkit-scrollbar {
+  width: .5em;
+  height: .5em;
+  position: absolute;
+}
+
+.hljs::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+
+.hljs::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 20px;
 }
 
 .hljs-built_in,
@@ -35,17 +50,17 @@ code {
 
 .hljs-name,
 .hljs-keyword {
-  color: #ff79c6;
+  color: #000;
 }
 
 .hljs,
 .hljs-subst {
-  color: #f8f8f2;
+  color: #2f3542;
 }
 
 .hljs-attr,
 .hljs-title {
-  color: #50fa7b;
+  color: #2f3542;
 }
 
 .hljs-string,
@@ -57,7 +72,8 @@ code {
 .hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
-  color: #f1fa8c;
+  color: #3742fa;
+  font-weight: bold;
 }
 
 .hljs-comment,
@@ -75,7 +91,7 @@ code {
 .hljs-type,
 .hljs-name,
 .hljs-strong {
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .hljs-literal,

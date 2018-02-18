@@ -155,9 +155,33 @@
       <div class="box-title">
         <h2>Examples</h2>
       </div>
-      <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
-      <button type="button" name="button" class="btn">Example</button>
-      <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
+      <div class="container wrap">
+        <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
+        <button type="button" name="button" class="btn">Example</button>
+        <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
+        <div class="dropdown margin-bottom-10">
+          <button type="button" name="button" class="btn">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
+          <div class="dropdown-content">
+            <ul>
+              <li>
+                <a href="#">
+                Edit
+              </a>
+              </li>
+              <li>
+                <a href="#">
+                Print
+              </a>
+              </li>
+              <li>
+                <a href="#">
+                Delete
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="content" id="content">
@@ -375,7 +399,7 @@ $ npm i @gustavoquinalha/buttons-css
       </div>
       <div class="container column">
         <div class="group-buttons">
-          <button type="button" name="button" class="btn">Group 1</button>
+          <button type="button" name="button" class="btn btn-active">Group 1</button>
           <button type="button" name="button" class="btn">Group 2</button>
           <button type="button" name="button" class="btn">Group 3</button>
           <button type="button" name="button" class="btn">Group 4</button>
@@ -383,7 +407,7 @@ $ npm i @gustavoquinalha/buttons-css
         <div class="example margin-bottom-20">
           <pre><code class="html" id="example11">
 &lt;div class=&quot;group-buttons&quot;&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
+  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-active&quot;&gt;Group 1&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
@@ -393,7 +417,7 @@ $ npm i @gustavoquinalha/buttons-css
         </div>
 
 
-        <div class="group-buttons column">
+        <div class="group-buttons column" style="max-width: 300px">
           <button type="button" name="button" class="btn">Group 1</button>
           <button type="button" name="button" class="btn">Group 2</button>
           <button type="button" name="button" class="btn">Group 3</button>
@@ -401,7 +425,7 @@ $ npm i @gustavoquinalha/buttons-css
         </div>
         <div class="example">
           <pre><code class="html" id="example12">
-&lt;div class=&quot;group-buttons column&quot;&gt;
+&lt;div class=&quot;group-buttons column&quot; style=&quot;max-width: 300px&quot;&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
