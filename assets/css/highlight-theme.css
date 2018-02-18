@@ -23,6 +23,7 @@ code {
   box-sizing: border-box;
   background: #282a36;
   border-radius: 4px;
+  max-height: 300px;
 }
 
 .hljs-built_in,
