@@ -56,6 +56,7 @@
       box-sizing: border-box;
       color: #000;
       margin-bottom: 100px;
+      width: 100%;
     }
 
     .content.content-header {
@@ -96,6 +97,8 @@
 
     .example {
       position: relative;
+      width: 100%;
+      display: none;
     }
 
     .type {
@@ -124,6 +127,43 @@
       margin: 2px;
     }
 
+    .relative {
+      position: relative;
+    }
+
+    .sidebar {
+      padding: 20px 0;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li a {
+      padding: 10px;
+      color: #000;
+      font-weight: 800;
+    }
+
+    .sidebar ul li a:hover {
+      color: var(--color-primary);
+    }
+
     @media (max-width: 768px) {
       .content.content-header h1 {
         font-size: 3rem;
@@ -150,439 +190,464 @@
   </header>
 
   <div class="size">
-
-    <div class="content" id="content">
-      <div class="box-title">
-        <h2>Examples</h2>
+    <div class="container wrap relative">
+      <div class="flex-basis-200 flex-grow-1">
+        <div class="sidebar">
+          <ul>
+            <li><a href="#example">Example</a> </li>
+            <li><a href="#install">Install</a> </li>
+            <li><a href="#default">Default</a> </li>
+            <li><a href="#sizes">Sizes</a> </li>
+            <li><a href="#full-width">Full Width</a> </li>
+            <li><a href="#rounded">Rounded</a> </li>
+            <li><a href="#primary-color">Primary colors</a> </li>
+            <li><a href="#status">Status</a> </li>
+            <li><a href="#disabled">Disabled</a> </li>
+            <li><a href="#buttons-icons">Buttons + icons</a> </li>
+            <li><a href="#icons">Icons</a> </li>
+            <li><a href="#loading">Loading</a> </li>
+            <li><a href="#transparent">Transparent</a> </li>
+            <li><a href="#group-buttons">Group buttons</a> </li>
+            <li><a href="#dropdowns">Dropdowns</a> </li>
+            <li><a href="#badges">Badges</a> </li>
+          </ul>
+        </div>
       </div>
-      <div class="container wrap">
-        <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
-        <button type="button" name="button" class="btn">Example</button>
-        <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
-        <div class="dropdown margin-bottom-10">
-          <button type="button" name="button" class="btn">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
-          <div class="dropdown-content">
-            <ul>
-              <li>
-                <a href="#">
-                Edit
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                Print
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                Delete
-              </a>
-              </li>
-            </ul>
+      <div class="flex-basis-600 flex-grow-2" id="content">
+        <div class="content" id="example">
+          <div class="box-title">
+            <h2>Examples</h2>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="content" id="content">
-      <div class="box-title">
-        <h2>Install</h2>
-      </div>
-      <p class="type">NPM</p>
-      <div class="example margin-bottom-10">
-        <pre><code class="shell" id="npm">
-$ npm i @gustavoquinalha/buttons-css
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#npm"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-      <p class="type">jsdelivr</p>
-      <div class="example">
-        <pre><code class="html" id="jsdelivr">
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@0.0.2/assets/css/buttons.min.css&quot;&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#jsdelivr"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content" id="content">
-      <div class="box-title">
-        <h2>Default</h2>
-      </div>
-      <button type="button" name="button" class="btn">Default</button>
-      <a href="#" class="btn">Default Link</a>
-
-      <div class="example">
-        <pre><code class="html" id="example1">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Default&lt;/button&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Default Link&lt;/a&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example1"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Sizes</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-lg">Button Large</button>
-      <button type="button" name="button" class="btn">Button Normal</button>
-      <button type="button" name="button" class="btn btn-sm">Button Small</button>
-
-      <div class="example">
-        <pre><code class="html" id="example2">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-lg&quot;&gt;Button Large&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Button Normal&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-sm&quot;&gt;Button Small&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example2"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Full width</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-full">Full width</button>
-
-      <div class="example">
-        <pre><code class="html" id="example3">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-full&quot;&gt;Full width&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example3"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Rounded</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-rounded">Rounded</button>
-      <a href="#" class="btn btn-rounded">Link Rounded</a>
-
-      <div class="example">
-        <pre><code class="html" id="example4">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-rounded&quot;&gt;Rounded&lt;/button&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded&quot;&gt;Link Rounded&lt;/a&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example4"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Primary colors</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-primary">Button primary</button>
-      <button type="button" name="button" class="btn btn-secundary">Button secundary</button>
-
-      <div class="example">
-        <pre><code class="html" id="example5">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button primary&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-secundary&quot;&gt;Button secundary&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example5"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Status</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-warning">Warning</button>
-      <button type="button" name="button" class="btn btn-danger">Danger</button>
-      <button type="button" name="button" class="btn btn-success">Success</button>
-
-      <div class="example">
-        <pre><code class="html" id="example6">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example6"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Disabled</h2>
-      </div>
-      <button type="button" name="button" class="btn" disabled>Disabled</button>
-      <button type="button" name="button" class="btn btn-primary" disabled>Disabled</button>
-
-      <div class="example">
-        <pre><code class="html" id="example7">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot; disabled&gt;Disabled&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example7"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Buttons + icons</h2>
-      </div>
-      <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
-      <button type="button" name="button" class="btn"><span class="feather-icon icon-pause"></span></button>
-      <button type="button" name="button" class="btn"><span class="feather-icon icon-play"></span></button>
-      <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
-
-      <div class="example">
-        <pre><code class="html" id="example8">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-arrow-left icon-margin-right&quot;&gt;&lt;/span&gt; Previous&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-pause&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-play&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Next &lt;span class=&quot;feather-icon icon-arrow-right icon-margin-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example8"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Icons</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-x"></span></button>
-      <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-book"></span></button>
-      <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-camera"></span></button>
-      <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-file"></span></button>
-
-      <div class="example">
-        <pre><code class="html" id="example9">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-book&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-camera&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-file&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example9"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Loading</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-min-width btn-link"><span class="icon icon-loader"></span></button>
-
-      <div class="example">
-        <pre><code class="html" id="example9">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example9"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Transparent background</h2>
-      </div>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-left"></span></button>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-right"></span></button>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-edit"></span></button>
-      <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-x"></span></button>
-
-      <div class="example">
-        <pre><code class="html" id="example10">
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-right&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-edit&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example10"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="box-title">
-        <h2>Group buttons</h2>
-      </div>
-      <div class="container column">
-        <div class="group-buttons">
-          <button type="button" name="button" class="btn btn-active">Group 1</button>
-          <button type="button" name="button" class="btn">Group 2</button>
-          <button type="button" name="button" class="btn">Group 3</button>
-          <button type="button" name="button" class="btn">Group 4</button>
-        </div>
-        <div class="example margin-bottom-20">
-          <pre><code class="html" id="example11">
-&lt;div class=&quot;group-buttons&quot;&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-active&quot;&gt;Group 1&lt;/button&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
-&lt;/div&gt;
-          </code></pre>
-          <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example11"><span class="feather-icon icon-clipboard"></span></button>
-        </div>
-
-
-        <div class="group-buttons column" style="max-width: 300px">
-          <button type="button" name="button" class="btn">Group 1</button>
-          <button type="button" name="button" class="btn">Group 2</button>
-          <button type="button" name="button" class="btn">Group 3</button>
-          <button type="button" name="button" class="btn">Group 4</button>
-        </div>
-        <div class="example">
-          <pre><code class="html" id="example12">
-&lt;div class=&quot;group-buttons column&quot; style=&quot;max-width: 300px&quot;&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
-  &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
-&lt;/div&gt;
-          </code></pre>
-          <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example12"><span class="feather-icon icon-clipboard"></span></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="content" id="content">
-      <div class="box-title">
-        <h2>Dropdowns</h2>
-      </div>
-
-      <div class="container wrap">
-        <div class="dropdown margin-bottom-10" style="width: 300px;">
-          <button type="button" name="button" class="btn">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
-          <div class="dropdown-content">
-            <ul>
-              <li>
-                <a href="#">
-                Edit
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                Print
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                Delete
-              </a>
-              </li>
-            </ul>
+          <div class="container wrap">
+            <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
+            <button type="button" name="button" class="btn">Example</button>
+            <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
+            <div class="dropdown margin-bottom-10">
+              <button type="button" name="button" class="btn">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
+              <div class="dropdown-content">
+                <ul>
+                  <li>
+                    <a href="#">
+                    Edit
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Print
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Delete
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="dropdown margin-bottom-10" style="width: 300px;">
-          <button type="button" name="button" class="btn btn-primary">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
-          <div class="dropdown-content">
-            <ul>
-              <li>
-                <a href="#">
-                Edit
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                Print
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                Delete
-              </a>
-              </li>
-            </ul>
+        <div class="content" id="install">
+          <div class="box-title">
+            <h2>Install</h2>
+          </div>
+          <div class="">
+            <p class="type">NPM</p>
+            <div class="example margin-bottom-10">
+              <pre><code class="shell" id="npm">
+      $ npm i @gustavoquinalha/buttons-css
+              </code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#npm"><span class="feather-icon icon-clipboard"></span></button>
+            </div>
+            <p class="type">jsdelivr</p>
+            <div class="example">
+              <pre><code class="html" id="jsdelivr">
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@0.0.2/assets/css/buttons.min.css&quot;&gt;
+              </code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#jsdelivr"><span class="feather-icon icon-clipboard"></span></button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="example margin-bottom-20">
-        <pre><code class="html" id="example13">
-&lt;div class=&quot;dropdown margin-bottom-10&quot; style=&quot;width: 300px;&quot;&gt;
-   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Dropdown &lt;span class=&quot;feather-icon icon-margin-left icon-chevron-down&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-   &lt;div class=&quot;dropdown-content&quot;&gt;
-      &lt;ul&gt;
-         &lt;li&gt;
-            &lt;a href=&quot;#&quot;&gt;
-            Edit
-            &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li&gt;
-            &lt;a href=&quot;#&quot;&gt;
-            Print
-            &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li&gt;
-            &lt;a href=&quot;#&quot;&gt;
-            Delete
-            &lt;/a&gt;
-         &lt;/li&gt;
-      &lt;/ul&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;dropdown margin-bottom-10&quot; style=&quot;width: 300px;&quot;&gt;
-   &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Dropdown &lt;span class=&quot;feather-icon icon-margin-left icon-chevron-down&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-   &lt;div class=&quot;dropdown-content&quot;&gt;
-      &lt;ul&gt;
-         &lt;li&gt;
-            &lt;a href=&quot;#&quot;&gt;
-            Edit
-            &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li&gt;
-            &lt;a href=&quot;#&quot;&gt;
-            Print
-            &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li&gt;
-            &lt;a href=&quot;#&quot;&gt;
-            Delete
-            &lt;/a&gt;
-         &lt;/li&gt;
-      &lt;/ul&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example13"><span class="feather-icon icon-clipboard"></span></button>
+
+        <div class="content" id="default">
+          <div class="box-title">
+            <h2>Default</h2>
+          </div>
+          <button type="button" name="button" class="btn">Default</button>
+          <a href="#" class="btn">Default Link</a>
+
+          <div class="example">
+            <pre><code class="html" id="example1">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Default&lt;/button&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Default Link&lt;/a&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example1"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="sizes">
+          <div class="box-title">
+            <h2>Sizes</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-lg">Button Large</button>
+          <button type="button" name="button" class="btn">Button Normal</button>
+          <button type="button" name="button" class="btn btn-sm">Button Small</button>
+
+          <div class="example">
+            <pre><code class="html" id="example2">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-lg&quot;&gt;Button Large&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Button Normal&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-sm&quot;&gt;Button Small&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example2"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+
+        </div>
+
+        <div class="content" id="full-width">
+          <div class="box-title">
+            <h2>Full width</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-full">Full width</button>
+
+          <div class="example">
+            <pre><code class="html" id="example3">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-full&quot;&gt;Full width&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example3"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="rounded">
+          <div class="box-title">
+            <h2>Rounded</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-rounded">Rounded</button>
+          <a href="#" class="btn btn-rounded">Link Rounded</a>
+
+          <div class="example">
+            <pre><code class="html" id="example4">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-rounded&quot;&gt;Rounded&lt;/button&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-rounded&quot;&gt;Link Rounded&lt;/a&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example4"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="primary-color">
+          <div class="box-title">
+            <h2>Primary colors</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-primary">Button primary</button>
+          <button type="button" name="button" class="btn btn-secundary">Button secundary</button>
+
+          <div class="example">
+            <pre><code class="html" id="example5">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button primary&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-secundary&quot;&gt;Button secundary&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example5"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="status">
+          <div class="box-title">
+            <h2>Status</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-warning">Warning</button>
+          <button type="button" name="button" class="btn btn-danger">Danger</button>
+          <button type="button" name="button" class="btn btn-success">Success</button>
+
+          <div class="example">
+            <pre><code class="html" id="example6">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example6"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="disabled">
+          <div class="box-title">
+            <h2>Disabled</h2>
+          </div>
+          <button type="button" name="button" class="btn" disabled>Disabled</button>
+          <button type="button" name="button" class="btn btn-primary" disabled>Disabled</button>
+
+          <div class="example">
+            <pre><code class="html" id="example7">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot; disabled&gt;Disabled&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example7"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="buttons-icons">
+          <div class="box-title">
+            <h2>Buttons + icons</h2>
+          </div>
+          <button type="button" name="button" class="btn"><span class="feather-icon icon-arrow-left icon-margin-right"></span> Previous</button>
+          <button type="button" name="button" class="btn"><span class="feather-icon icon-pause"></span></button>
+          <button type="button" name="button" class="btn"><span class="feather-icon icon-play"></span></button>
+          <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
+
+          <div class="example">
+            <pre><code class="html" id="example8">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-arrow-left icon-margin-right&quot;&gt;&lt;/span&gt; Previous&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-pause&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;&lt;span class=&quot;feather-icon icon-play&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Next &lt;span class=&quot;feather-icon icon-arrow-right icon-margin-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example8"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="icons">
+          <div class="box-title">
+            <h2>Icons</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-x"></span></button>
+          <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-book"></span></button>
+          <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-camera"></span></button>
+          <button type="button" name="button" class="btn btn-link"><span class="feather-icon icon-file"></span></button>
+
+          <div class="example">
+            <pre><code class="html" id="example9">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-book&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-camera&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-file&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example9"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="loading">
+          <div class="box-title">
+            <h2>Loading</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-min-width btn-link"><span class="icon icon-loader"></span></button>
+
+          <div class="example">
+            <pre><code class="html" id="example9">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example9"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="transparent">
+          <div class="box-title">
+            <h2>Transparent background</h2>
+          </div>
+          <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-left"></span></button>
+          <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-chevrons-right"></span></button>
+          <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-edit"></span></button>
+          <button type="button" name="button" class="btn btn-link btn-transparent"><span class="feather-icon icon-x"></span></button>
+
+          <div class="example">
+            <pre><code class="html" id="example10">
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-left&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-chevrons-right&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-edit&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-link btn-transparent&quot;&gt;&lt;span class=&quot;feather-icon icon-x&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example10"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="group-buttons">
+          <div class="box-title">
+            <h2>Group buttons</h2>
+          </div>
+          <div class="container column">
+            <div class="group-buttons">
+              <button type="button" name="button" class="btn btn-active">Group 1</button>
+              <button type="button" name="button" class="btn">Group 2</button>
+              <button type="button" name="button" class="btn">Group 3</button>
+              <button type="button" name="button" class="btn">Group 4</button>
+            </div>
+            <div class="example margin-bottom-20">
+              <pre><code class="html" id="example11">
+    &lt;div class=&quot;group-buttons&quot;&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-active&quot;&gt;Group 1&lt;/button&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
+    &lt;/div&gt;
+              </code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example11"><span class="feather-icon icon-clipboard"></span></button>
+            </div>
+
+
+            <div class="group-buttons column" style="max-width: 300px">
+              <button type="button" name="button" class="btn">Group 1</button>
+              <button type="button" name="button" class="btn">Group 2</button>
+              <button type="button" name="button" class="btn">Group 3</button>
+              <button type="button" name="button" class="btn">Group 4</button>
+            </div>
+            <div class="example">
+              <pre><code class="html" id="example12">
+    &lt;div class=&quot;group-buttons column&quot; style=&quot;max-width: 300px&quot;&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 1&lt;/button&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 2&lt;/button&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 3&lt;/button&gt;
+      &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Group 4&lt;/button&gt;
+    &lt;/div&gt;
+              </code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example12"><span class="feather-icon icon-clipboard"></span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content" id="dropdowns">
+          <div class="box-title">
+            <h2>Dropdowns</h2>
+          </div>
+
+          <div class="container wrap">
+            <div class="dropdown margin-bottom-10" style="width: 300px;">
+              <button type="button" name="button" class="btn">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
+              <div class="dropdown-content">
+                <ul>
+                  <li>
+                    <a href="#">
+                    Edit
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Print
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Delete
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dropdown margin-bottom-10" style="width: 300px;">
+              <button type="button" name="button" class="btn btn-primary">Dropdown <span class="feather-icon icon-margin-left icon-chevron-down"></span></button>
+              <div class="dropdown-content">
+                <ul>
+                  <li>
+                    <a href="#">
+                    Edit
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Print
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Delete
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="example margin-bottom-20">
+            <pre><code class="html" id="example13">
+    &lt;div class=&quot;dropdown margin-bottom-10&quot; style=&quot;width: 300px;&quot;&gt;
+       &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn&quot;&gt;Dropdown &lt;span class=&quot;feather-icon icon-margin-left icon-chevron-down&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+       &lt;div class=&quot;dropdown-content&quot;&gt;
+          &lt;ul&gt;
+             &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                Edit
+                &lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                Print
+                &lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                Delete
+                &lt;/a&gt;
+             &lt;/li&gt;
+          &lt;/ul&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dropdown margin-bottom-10&quot; style=&quot;width: 300px;&quot;&gt;
+       &lt;button type=&quot;button&quot; name=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Dropdown &lt;span class=&quot;feather-icon icon-margin-left icon-chevron-down&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+       &lt;div class=&quot;dropdown-content&quot;&gt;
+          &lt;ul&gt;
+             &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                Edit
+                &lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                Print
+                &lt;/a&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                Delete
+                &lt;/a&gt;
+             &lt;/li&gt;
+          &lt;/ul&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example13"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+        </div>
+
+        <div class="content" id="badges">
+          <div class="box-title">
+            <h2>Badges</h2>
+          </div>
+
+          <div class="badge">
+            <div class="badge--number">0.0.1</div>
+            <a href="#" class="btn">Version</a>
+          </div>
+
+          <div class="badge">
+            <div class="badge--number">3</div>
+            <a href="#" class="btn btn-secundary"><span class="feather-icon icon-star icon-margin-right"></span> Stars</a>
+          </div>
+
+          <div class="badge">
+            <div class="badge--number">6</div>
+            <a href="#" class="btn btn-danger"><span class="feather-icon icon-alert-triangle icon-margin-right"></span> Issues</a>
+          </div>
+
+          <div class="example margin-bottom-20">
+            <pre><code class="html" id="example14">
+    &lt;div class=&quot;badge&quot;&gt;
+      &lt;div class=&quot;badge--number&quot;&gt;0.0.1&lt;/div&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Version&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;badge&quot;&gt;
+      &lt;div class=&quot;badge--number&quot;&gt;3&lt;/div&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-secundary&quot;&gt;&lt;span class=&quot;feather-icon icon-star icon-margin-right&quot;&gt;&lt;/span&gt;Stars&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;badge&quot;&gt;
+      &lt;div class=&quot;badge--number&quot;&gt;6&lt;/div&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;&lt;span class=&quot;feather-icon icon-alert-triangle icon-margin-right&quot;&gt;&lt;/span&gt;Issues&lt;/a&gt;
+    &lt;/div&gt;
+            </code></pre>
+            <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example14"><span class="feather-icon icon-clipboard"></span></button>
+          </div>
+
+        </div>
       </div>
     </div>
-
-    <div class="content" id="content">
-      <div class="box-title">
-        <h2>Badges</h2>
-      </div>
-
-      <div class="badge">
-        <div class="badge--number">0.0.1</div>
-        <a href="#" class="btn">Version</a>
-      </div>
-
-      <div class="badge">
-        <div class="badge--number">3</div>
-        <a href="#" class="btn btn-secundary"><span class="feather-icon icon-star icon-margin-right"></span> Stars</a>
-      </div>
-
-      <div class="badge">
-        <div class="badge--number">6</div>
-        <a href="#" class="btn btn-danger"><span class="feather-icon icon-alert-triangle icon-margin-right"></span> Issues</a>
-      </div>
-
-      <div class="example margin-bottom-20">
-        <pre><code class="html" id="example14">
-&lt;div class=&quot;badge&quot;&gt;
-  &lt;div class=&quot;badge--number&quot;&gt;0.0.1&lt;/div&gt;
-  &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Version&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;badge&quot;&gt;
-  &lt;div class=&quot;badge--number&quot;&gt;3&lt;/div&gt;
-  &lt;a href=&quot;#&quot; class=&quot;btn btn-secundary&quot;&gt;&lt;span class=&quot;feather-icon icon-star icon-margin-right&quot;&gt;&lt;/span&gt;Stars&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;badge&quot;&gt;
-  &lt;div class=&quot;badge--number&quot;&gt;6&lt;/div&gt;
-  &lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;&lt;span class=&quot;feather-icon icon-alert-triangle icon-margin-right&quot;&gt;&lt;/span&gt;Issues&lt;/a&gt;
-&lt;/div&gt;
-        </code></pre>
-        <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#example14"><span class="feather-icon icon-clipboard"></span></button>
-      </div>
-
-    </div>
-
-
   </div>
 
   <footer>
