@@ -100,7 +100,7 @@
     width: 150px;
   }
 
-  span.feather-icon {
+  .feather-icon {
     font-weight: 700;
 
     &.icon-margin-right {
@@ -118,14 +118,13 @@
 
   &.btn-transparent {
     background: transparent;
-    font-size: 20px;
 
     &:hover {
       opacity: 0.5;
     }
   }
 
-  .icon.icon-loader {
+  .feather-icon.icon-loader {
     @keyframes loading {
       from {
         transform: rotate(360deg);

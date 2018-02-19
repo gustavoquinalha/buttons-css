@@ -16,11 +16,12 @@ code {
   padding: 0;
   width: 100%;
   max-width: 100%;
+  overflow: auto;
 }
 
 .hljs {
   display: block;
-  overflow-x: auto;
+  overflow: auto;
   padding: 10px;
   box-sizing: border-box;
   background: #f0f0f0;
