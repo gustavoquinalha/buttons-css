@@ -1,7 +1,7 @@
 
 <div align="center">
 <h1>Buttons.css</h1>
-<p>Simple CSS for buttons.</p>
+<p>Simple CSS for buttons and dropdowns.</p>
 <img src="https://img.shields.io/badge/version-1.0.0-green.svg">
 <img src="https://img.shields.io/github/issues/gustavoquinalha/buttons-css.svg">
 <img src="https://img.shields.io/github/license/gustavoquinalha/buttons-css.svg">
