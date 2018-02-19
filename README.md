@@ -7,14 +7,17 @@
 <img src="https://img.shields.io/github/license/gustavoquinalha/buttons-css.svg">
 </div>
 
-# Online Demo
-[Online Demo](http://quinalha.me/buttons-css/)
-[Documentation](http://quinalha.me/buttons-css/#install)
-[Codepen Demo](https://codepen.io/gustavoquinalha/pen/paaKxq?editors=1100)
+# Demos
+- [Online Demo](http://quinalha.me/buttons-css/)
+- [Documentation](http://quinalha.me/buttons-css/#install)
+- [Codepen Demo](https://codepen.io/gustavoquinalha/pen/paaKxq?editors=1100)
 
 # Install
 ```
-$ npm i @gustavoquinalha/buttons-css
+$ npm i @gustavoquinalha/buttons-css -D
+```
+```
+$ yarn add @gustavoquinalha/buttons-css -D
 ```
 or
 ```

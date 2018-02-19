@@ -1,7 +1,7 @@
 {
   "name": "@gustavoquinalha/buttons-css",
   "version": "0.0.2",
-  "description": "",
+  "description": "Simple CSS for buttons and dropdowns.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/gustavoquinalha/buttons-css.git"
   },
   "author": "gustavoquinalha <gusquinalha@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gustavoquinalha/buttons-css/issues"
   },
