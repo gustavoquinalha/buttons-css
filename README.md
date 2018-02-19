@@ -2,7 +2,7 @@
 <div align="center">
 <h1>Buttons.css</h1>
 <p>Simple CSS for buttons.</p>
-<img src="https://img.shields.io/badge/version-0.0.2-green.svg">
+<img src="https://img.shields.io/badge/version-1.0.0-green.svg">
 <img src="https://img.shields.io/github/issues/gustavoquinalha/buttons-css.svg">
 <img src="https://img.shields.io/github/license/gustavoquinalha/buttons-css.svg">
 </div>
@@ -21,7 +21,7 @@ $ yarn add @gustavoquinalha/buttons-css -D
 ```
 or
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@0.0.2/assets/css/buttons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@1.0.0/assets/css/buttons.min.css">
 ```
 
 # Docs
