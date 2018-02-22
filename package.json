@@ -1,6 +1,6 @@
 {
   "name": "@gustavoquinalha/buttons-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple CSS for buttons and dropdowns.",
   "main": "gulpfile.js",
   "scripts": {
