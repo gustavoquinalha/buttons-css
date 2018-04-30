@@ -180,3 +180,8 @@ a:hover {
     font-size: 3rem;
   }
 }
+
+.alert {
+  color: #ffa502;
+  font-size: 12px;
+}

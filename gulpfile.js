@@ -36,7 +36,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.write())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(rename("style.min.css"))
+        .pipe(rename("buttons-css.min.css"))
         .pipe(gulp.dest(output))
         .pipe(browserSync.stream());
 });

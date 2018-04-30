@@ -2,7 +2,7 @@
 <div align="center">
 <h1>Buttons.css</h1>
 <p>Simple CSS for buttons and dropdowns.</p>
-<img src="https://img.shields.io/badge/version-1.0.1-green.svg">
+<img src="https://img.shields.io/badge/version-1.0.2-green.svg">
 <img src="https://img.shields.io/github/issues/gustavoquinalha/buttons-css.svg">
 <img src="https://img.shields.io/github/license/gustavoquinalha/buttons-css.svg">
 </div>
@@ -147,3 +147,9 @@ or
   <a href="#" class="btn btn-danger"><span class="feather-icon icon-alert-triangle icon-margin-right"></span> Issues</a>
 </div>
 ```
+
+
+## changes
+> 30 abril
+- Change name to buttons-css.css and buttons-css.min.css
+- por default nao vem icones

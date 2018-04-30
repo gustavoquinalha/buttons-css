@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buttons CSS - @gustavoquinalha</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
-  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <link rel="stylesheet" href="./assets/css/buttons-css.min.css">
   <link rel="stylesheet" href="./assets/css/highlight-theme.css">
   <link rel="stylesheet" href="./assets/css/master.css">
+  <link rel="stylesheet" href="./assets/css/icons.css">
 
   <meta name="description" content="Simple CSS for buttons and dropdowns." />
   <meta name="author" content="gustavoquinalha" />
@@ -117,6 +118,7 @@
             <button type="button" name="button" class="btn">Example</button>
             <button type="button" name="button" class="btn">Next <span class="feather-icon icon-arrow-right icon-margin-left"></span></button>
           </div>
+          <p class="alert">You need import your icon library.</p>
         </div>
 
         <div class="content" id="demos">
@@ -136,16 +138,17 @@
           <div class="">
             <p class="type">NPM</p>
             <div class="example margin-bottom-10">
-              <pre><code class="shell" id="npm">
-$ npm i @gustavoquinalha/buttons-css
-              </code></pre>
+              <pre><code class="shell" id="npm">$ npm i @gustavoquinalha/buttons-css</code></pre>
               <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#npm"><span class="feather-icon icon-clipboard"></span></button>
+            </div>
+            <p class="type">Yarn</p>
+            <div class="example margin-bottom-10">
+              <pre><code class="shell" id="yarn">$ yarn add @gustavoquinalha/buttons-css</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#yarn"><span class="feather-icon icon-clipboard"></span></button>
             </div>
             <p class="type">jsdelivr</p>
             <div class="example">
-              <pre><code class="html" id="jsdelivr">
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@0.0.2/assets/css/buttons.min.css&quot;&gt;
-              </code></pre>
+              <pre><code class="html" id="jsdelivr">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@1.0.1/assets/css/buttons-css.min.css&quot;&gt;</code></pre>
               <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#jsdelivr"><span class="feather-icon icon-clipboard"></span></button>
             </div>
           </div>
