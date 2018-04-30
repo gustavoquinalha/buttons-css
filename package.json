@@ -1,7 +1,7 @@
 {
   "name": "@gustavoquinalha/buttons-css",
-  "version": "1.0.1",
-  "description": "Simple CSS for buttons and dropdowns.",
+  "version": "1.0.2",
+  "description": "Simple and Pure CSS for buttons and dropdowns.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
