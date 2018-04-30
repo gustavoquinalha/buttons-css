@@ -22,7 +22,7 @@ $ yarn add @gustavoquinalha/buttons-css -D
 ```
 or
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@1.0.1/assets/css/buttons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gustavoquinalha/buttons-css@1.0.2/assets/css/buttons.min.css">
 ```
 
 # Docs
